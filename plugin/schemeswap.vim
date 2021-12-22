@@ -62,6 +62,23 @@ function! s:lighttheme()
   endif
 endfunction
 
+
+function! s:nighttime()
+  if !exists('g:schemeswap_nighttime')
+    return '17:00'
+  else
+    return g:schemeswap_nighttime
+  endif
+endfunction
+
+function! s:daytime()
+  if !exists('g:schemeswap_daytime')
+    return '07:30'
+  else
+    return g:schemeswap_daytime
+  endif
+endfunction
+
 function! s:setscheme(theme)
   " TODO: implement setting scheme
   if a:theme == "dark"
@@ -105,7 +122,7 @@ function! SetBackground()
   " set dark background (or really whatever theme you want)
   " if it's after g:scheschemeswap_nighttime
 
-  if CurrentTime() >= g:schemeswap_nighttime || CurrentTime() <= g:schemeswap_daytime
+  if CurrentTime() >= s:nighttime() || CurrentTime() <= s:daytime()
 
     " check if background is explicitly set to light
     " this will happen if user runs `:BG` or manually sets it
