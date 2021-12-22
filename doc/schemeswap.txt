@@ -1,0 +1,20 @@
+schemeswap.txt*  switch vim background at "nighttime"
+
+Author:  Cam <https://u64.cam>
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                    *schemeswap*
+
+Automatically change your Vim colorscheme (and other stuff) at a set time.  This
+doc is a work in progress...
+
+                                                *schemeswap-:BG*
+:BG                     Toggle colorscheme settings from light to dark.
+
+ABOUT                                           *schemeswap-about*
+
+Grab the latest version or report a bug on GitHub:
+
+http://github.com/camerondurham/schemeswap.vim
+
+ vim:tw=78:et:ft=help:norl:
